@@ -1,0 +1,27 @@
+---
+description: Deploy target is Cloudflare Pages (Worker) with KV as the database
+alwaysApply: true
+---
+
+# Cloudflare Pages + Worker + KV
+
+This app deploys on **Cloudflare Workers** via **OpenNext** (`@opennextjs/cloudflare`), with **Cloudflare KV** (`env.DB`) as the primary database.
+
+## Platform
+
+- Use Wrangler (`wrangler.jsonc`) and OpenNext (`open-next.config.ts`); do not reintroduce Vercel Postgres or Prisma.
+- Access bindings with `getCloudflareContext({ async: true })` from `@opennextjs/cloudflare`.
+- Avoid Node-only packages (`fs`, TCP DB clients, native addons). Prefer Workers-compatible APIs.
+
+## Data layer
+
+- One denormalized JSON document per group at `group:{groupId}` (see `src/lib/kv/*` and `src/lib/api.ts`).
+- Categories live under the `categories` key (seeded).
+- Concurrent group writes are **last-write-wins**.
+- Do not use KV for large binaries; document/receipt uploads are out of scope until R2 is added.
+
+## Local / deploy
+
+- Local: `npm run dev` (OpenNext dev bindings) or `npm run preview`.
+- Deploy: `npm run deploy`.
+- Keep README and `.env.example` aligned with Pages/Workers + KV (no Postgres URLs).
