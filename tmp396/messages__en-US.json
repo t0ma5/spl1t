@@ -38,17 +38,13 @@
       "lastMonth": "Last month",
       "earlierThisYear": "Earlier this year",
       "lastYear": "Last year",
-      "older": "Older",
-      "currentMonth": "Current Month"
+      "older": "Older"
     }
   },
   "ExpenseCard": {
     "paidBy": "Paid by <strong>{paidBy}</strong> for <paidFor></paidFor>",
-    "everyone": "everyone",
     "receivedBy": "Received by <strong>{paidBy}</strong> for <paidFor></paidFor>",
-    "yourBalance": "Your balance:",
-    "notInvolved": "You are not involved",
-    "copy": "Copy expense"
+    "yourBalance": "Your balance:"
   },
   "Groups": {
     "myGroups": "My groups",
@@ -77,26 +73,9 @@
       "description": "If a group was shared with you, you can paste its URL here to add it to your list.",
       "error": "Oops, we are not able to find the group from the URL you provided…"
     },
-    "ImportJSON": {
-      "button": "Import JSON",
-      "title": "Import a group from JSON",
-      "description": "Upload a Spliit or Tricount JSON export to create a new group with its participants, expenses, notes and history",
-      "chooseFile": "Choose file",
-      "importing": "Importing…",
-      "invalidJson": "That file is not valid JSON.",
-      "invalidSchema": "That file doesn’t look like a Spliit group export.",
-      "error": "Something went wrong while importing the group."
-    },
     "NotFound": {
       "text": "This group does not exist.",
       "link": "Go to recently visited groups"
-    },
-    "Deleted": {
-      "title": "Group scheduled for deletion",
-      "description": "“{name}” was soft-deleted. You can restore it within 30 days, or it will be permanently removed. Inactive groups also expire after 2 years without activity.",
-      "restore": "Restore group",
-      "restored": "Group restored",
-      "back": "Back to groups"
     }
   },
   "GroupForm": {
@@ -115,37 +94,12 @@
       "placeholder": "$, €, £…",
       "description": "We’ll use it to display amounts."
     },
-    "CurrencyCodeField": {
-      "label": "Main currency",
-      "createDescription": "All amounts and balances will be in this currency.",
-      "editDescription": "All amounts and balances will be in this currency. Changing this will NOT convert expenses already entered, except when the currency has different \"minor units\" than the current one (e.g. changing from US Dollar to Japanese Yen)",
-      "customOption": "Custom"
-    },
-    "DefaultSplitField": {
-      "label": "Default split mode",
-      "description": "Used for new expenses when this device has no saved split preference.",
-      "evenly": "Split evenly",
-      "byShares": "Split by shares",
-      "byPercentage": "Split by percentage",
-      "byAmount": "Split by amount"
-    },
-    "PinField": {
-      "title": "Group PIN",
-      "description": "Optional 4–8 digit PIN. Anyone with the link still needs a PIN to access the group for the first time",
-      "enabled": "A PIN is currently enabled for this group.",
-      "current": "Current PIN",
-      "set": "Set PIN",
-      "new": "New PIN",
-      "clear": "Remove PIN",
-      "formatHelp": "Use 4 to 8 digits. Leave blank to keep the current PIN."
-    },
     "Participants": {
       "title": "Participants",
       "description": "Enter the name for each participant.",
       "protectedParticipant": "This participant is part of expenses, and can not be removed.",
       "new": "New",
       "add": "Add participant",
-      "sort": "Sort A–Z",
       "John": "John",
       "Jane": "Jane",
       "Jack": "Jack"
@@ -163,18 +117,7 @@
       "saving": "Saving…",
       "create": "Create",
       "creating": "Creating…",
-      "cancel": "Cancel",
-      "delete": "Delete group",
-      "deleteConfirm": "Soft-delete this group? You can restore it within 30 days.",
-      "deleted": "Group scheduled for deletion"
-    },
-    "GroupSettings": {
-      "title": "Group settings",
-      "description": "These settings are shared with everyone who uses this group.",
-      "FixedExpenseDateGroupsField": {
-        "label": "Group expenses by calendar month",
-        "description": "Useful for recurring monthly expenses for roommates and shared bills."
-      }
+      "cancel": "Cancel"
     }
   },
   "ExpenseForm": {
@@ -190,15 +133,10 @@
         "label": "Income date",
         "description": "Enter the date the income was received."
       },
-      "currencyField": {
-        "label": "Currency of income",
-        "description": "The currency in which the income was received."
-      },
       "categoryFieldDescription": "Select the income category.",
       "paidByField": {
         "label": "Received by",
-        "placeholder": "Select a participant",
-        "description": "Select who received the income and how much."
+        "description": "Select the participant who received the income."
       },
       "paidFor": {
         "title": "Received for",
@@ -219,19 +157,15 @@
         "label": "Expense date",
         "description": "Enter the date the expense was paid."
       },
-      "currencyField": {
-        "label": "Currency of expense",
-        "description": "The currency in which the expense was paid."
-      },
       "categoryFieldDescription": "Select the expense category.",
       "paidByField": {
         "label": "Paid by",
-        "placeholder": "Select a participant",
-        "description": "Select who paid the expense and how much."
+        "description": "Select the participant who paid the expense."
       },
       "recurrenceRule": {
         "label": "Expense Recurrence",
         "description": "Select how often the expense should repeat.",
+
         "none": "None",
         "daily": "Daily",
         "weekly": "Weekly",
@@ -245,33 +179,7 @@
       "attachDescription": "See and attach receipts to the expense."
     },
     "amountField": {
-      "label": "Amount",
-      "mathHelp": "You can use formulas. Example: 10+5.50 or 5*8"
-    },
-    "participant": "Participant",
-    "total": "Total",
-    "addPayer": "Add payer",
-    "removePayer": "Remove payer",
-    "conversionUnavailable": "To set a different currency per expense and convert amounts, select a non-custom currency for the group.",
-    "originalAmountField": {
-      "label": "Amount to convert"
-    },
-    "conversionRateField": {
-      "useApi": "Use rates from Frankfurter",
-      "useCustom": "Use custom rate",
-      "label": "Exchange rate"
-    },
-    "conversionRateState": {
-      "loading": "Getting exchange rates…",
-      "success": "Obtained rates:",
-      "error": "Oops, we could not get the most recent rates.",
-      "staleRate": "Using rate:",
-      "noRate": "Enter a custom rate below.",
-      "currencyNotFound": "Oops, Frankfurter does not have the rate for this currency at this day.",
-      "noDate": "Enter the expense date to get a conversion rate.",
-      "dateMismatch": "Rates from date: {date}",
-      "refresh": "Refresh",
-      "customRate": "Using custom rate"
+      "label": "Amount"
     },
     "isReimbursementField": {
       "label": "This is a reimbursement"
@@ -286,6 +194,8 @@
     "selectAll": "Select all",
     "shares": "share(s)",
     "advancedOptions": "Advanced splitting options…",
+    "participant": "Participant",
+    "total": "Total",
     "SplitModeField": {
       "label": "Split mode",
       "evenly": "Evenly",
@@ -307,7 +217,6 @@
     "save": "Save",
     "saving": "Saving…",
     "cancel": "Cancel",
-    "copy": "Copy",
     "reimbursement": "Reimbursement"
   },
   "ExpenseDocumentsInput": {
@@ -347,7 +256,7 @@
     }
   },
   "Balances": {
-    "title": "Balance",
+    "title": "Balances",
     "description": "This is the amount that each participant paid or was paid for.",
     "Reimbursements": {
       "title": "Suggested reimbursements",
@@ -367,46 +276,10 @@
       "yourSpendings": "Your total spendings",
       "yourEarnings": "Your total earnings",
       "yourShare": "Your total share"
-    },
-    "MonthlySpending": {
-      "title": "Monthly spending",
-      "description": "Spending by month and category.",
-      "rangeLabel": "Range",
-      "groupingLabel": "Category grouping",
-      "chartTypeLabel": "Chart type",
-      "stackedTitle": "Monthly categories",
-      "breakdownTitle": "{range} category breakdown",
-      "balanceTimelineTitle": "Balance timeline",
-      "categoryMarkers": "Category markers",
-      "isOwedMoney": "Is owed money",
-      "owesMoney": "Owes money",
-      "payment": "Reimbursement",
-      "roundAmountsLabel": "Round amounts",
-      "stackOrderLabel": "Stack order",
-      "income": "Income",
-      "noData": "No spending data yet.",
-      "ChartTypes": {
-        "bars": "Stacked bars",
-        "columns": "Stacked columns"
-      },
-      "StackOrders": {
-        "smallInside": "Smaller debt inside",
-        "smallOutside": "Smaller debt outside"
-      },
-      "RangeOptions": {
-        "three": "3 months",
-        "six": "6 months",
-        "twelve": "12 months",
-        "all": "All"
-      },
-      "GroupingOptions": {
-        "categoryGroup": "Categories",
-        "category": "Detailed"
-      }
     }
   },
   "Activity": {
-    "title": "History",
+    "title": "Activity",
     "description": "Overview of all activity in this group.",
     "noActivity": "There is not yet any activity in your group.",
     "someone": "Someone",
@@ -427,7 +300,7 @@
     }
   },
   "Information": {
-    "title": "Info",
+    "title": "Information",
     "description": "Use this place to add any information that can be relevant to the group participants.",
     "empty": "No group information yet."
   },
@@ -437,40 +310,25 @@
   "Share": {
     "title": "Share",
     "description": "For other participants to see the group and add expenses, share its URL with them.",
-    "qrAlt": "QR code for this group",
-    "qrHelp": "Scan to open the group on another device.",
     "warning": "Warning!",
     "warningHelp": "Every person with the group URL will be able to see and edit expenses. Share with caution!"
-  },
-  "GroupPin": {
-    "title": "Enter group PIN",
-    "description": "This group is protected with a PIN. Enter it to continue on this device.",
-    "placeholder": "PIN",
-    "unlock": "Unlock",
-    "incorrect": "Incorrect PIN. Try again."
   },
   "SchemaErrors": {
     "min1": "Enter at least one character.",
     "min2": "Enter at least two characters.",
     "max5": "Enter at most five characters.",
     "max50": "Enter at most 50 characters.",
-    "max200": "Enter at most 200 characters.",
-    "expenseDateTooFar": "Expense date cannot be more than 1 year in the future.",
-    "expenseDateTooOld": "Expense date cannot be more than 5 years in the past.",
     "duplicateParticipantName": "Another participant already has this name.",
     "titleRequired": "Please enter a title.",
     "invalidNumber": "Invalid number.",
     "amountRequired": "You must enter an amount.",
     "amountNotZero": "The amount must not be zero.",
     "amountTenMillion": "The amount must be lower than 10,000,000.",
-    "ratePositive": "The rate must be strictly greater than zero.",
-    "paidByRequired": "You must select at least one participant who paid.",
+    "paidByRequired": "You must select a participant.",
     "paidForMin1": "The expense must be paid for at least one participant.",
     "noZeroShares": "All shares must be higher than 0.",
     "amountSum": "Sum of amounts must equal the expense amount.",
-    "percentageSum": "Sum of percentages must equal 100.",
-    "pinFormat": "PIN must be 4 to 8 digits.",
-    "pinConflict": "Choose either a new PIN or remove PIN, not both."
+    "percentageSum": "Sum of percentages must equal 100."
   },
   "Categories": {
     "search": "Search category...",
@@ -539,19 +397,6 @@
       "Trash": "Trash",
       "TV/Phone/Internet": "TV/Phone/Internet",
       "Water": "Water"
-    }
-  },
-  "Currencies": {
-    "search": "Search currency...",
-    "noCurrency": "No currencies found.",
-    "custom": {
-      "heading": "Custom"
-    },
-    "common": {
-      "heading": "Most common"
-    },
-    "other": {
-      "heading": "Other currencies"
     }
   }
 }
