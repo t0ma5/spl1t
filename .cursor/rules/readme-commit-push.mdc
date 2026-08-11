@@ -1,0 +1,14 @@
+---
+description: After any README.md update, commit and push to origin without waiting to be asked again.
+alwaysApply: true
+---
+
+# README updates → commit & push
+
+Whenever `README.md` is changed (docs, credits, deploy notes, feature lists, etc.):
+
+1. Commit the README change (and any co-edited rule/docs that belong with it) in the same turn.
+2. Push to the tracked remote branch (`git push -u origin HEAD` or `git push origin <branch>` as appropriate).
+3. Do not leave README-only work as local uncommitted changes, and do not wait for a separate “please commit/push” message for that README update.
+
+Still follow normal git safety: no force-push to main/master, no secrets in commits, no amending unless amend rules allow it. If push needs explicit approval in a restricted mode, request it immediately with the exact push command rather than skipping the push.
