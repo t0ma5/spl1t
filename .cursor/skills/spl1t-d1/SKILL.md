@@ -10,7 +10,7 @@ description: spl1t data layer, PIN auth, and Cloudflare D1 conventions. Use when
 - Primary store is **Cloudflare D1**, binding `DATABASE`. Schema lives in `migrations/`.
 - Application access: `getRepository()` in `src/lib/db/index.ts`. Tests inject `createMemoryRepository()`.
 - Do not add Prisma, Postgres, or write new `group:{id}` KV documents.
-- Mutations go through `withGroupWrite` / `repo.save(group, expectedVersion)` so concurrent edits retry instead of last-write-wins.
+- Mutations go through `withGroupWrite` / `repo.save(group, expectedVersion, previous)`. D1 writes a child-row diff against `previous` instead of deleting and reinserting the whole group.
 - Amounts are **integer minor units**. Validate with `assertIntegerMinorUnits` on write.
 
 ## PIN
