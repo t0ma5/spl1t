@@ -16,8 +16,8 @@ description: spl1t data layer, PIN auth, and Cloudflare D1 conventions. Use when
 
 ## Worker runtime
 
-- OpenNext SSR of this app uses tens to hundreds of ms of CPU. Set `limits.cpu_ms` in `wrangler.jsonc` (paid Workers Standard, max 300000). Without it, Cloudflare’s default (~10–30ms) plus “infrequent overage” grace will 1102 once traffic is consistent.
-- Enable `observability.enabled` so Workers Logs exist; GraphQL `workersInvocationsAdaptive` still works when logs are off.
+- Workers Free is a hard 10 ms CPU per request; `limits.cpu_ms` is **rejected** (error 100328). Do not add it unless the account is on Workers Paid. Paid default is already 30 s without the field.
+- Enable `observability.enabled` so Workers Logs exist; GraphQL `workersInvocationsAdaptive` still works when logs are off. Keep group reads/writes surgical so OpenNext SSR stays under the Free cap.
 
 ## PIN
 
