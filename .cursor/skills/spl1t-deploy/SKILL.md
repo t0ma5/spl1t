@@ -16,7 +16,7 @@ These are **two independent actions**. A git push does not go live. `npm run dep
 
 ## Do not
 
-- Do not run GitHub Actions **Deploy** (`gh workflow run Deploy`). The workflow token is not linked to Cloudflare.
+- Do not add a GitHub Actions job that deploys to Cloudflare. GitHub is not linked to CF.
 - Do not treat CI on push as a production deploy. CI is types/lint/format/tests only.
 - Do not deploy Prisma/Postgres PR branches (`pr/*` based on upstream). Production is **`main`** (OpenNext + D1).
 

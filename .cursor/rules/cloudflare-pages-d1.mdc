@@ -29,5 +29,5 @@ This app deploys on **Cloudflare Workers** via **OpenNext** (`@opennextjs/cloudf
 
 - Apply migrations: `npm run db:migrate:local` / `npm run db:migrate:remote`.
 - Local: `npm run dev` (OpenNext dev bindings) or `npm run preview`.
-- GitHub and Cloudflare are **not** linked. Push updates GitHub only. Live deploys are `npm run deploy` with **Wrangler OAuth** (see `.cursor/skills/spl1t-deploy/SKILL.md`). Do not use GitHub Actions **Deploy**.
+- GitHub and Cloudflare are **not** linked. Push updates GitHub only. Live deploys are `npm run deploy` with **Wrangler OAuth** (see `.cursor/skills/spl1t-deploy/SKILL.md`).
 - Keep README and `.env.example` aligned with Workers + D1 (no Postgres URLs).
