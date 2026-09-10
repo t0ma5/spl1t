@@ -1,0 +1,23 @@
+---
+name: spl1t-upstream
+description: >-
+  Track upstream spliit-app/spliit PRs to port into this fork. Use when
+  checking latest PRs, what's new upstream, what to port, next work,
+  improvements, or ideas for spl1t.
+---
+
+# Upstream Spliit PRs
+
+Upstream: https://github.com/spliit-app/spliit/pulls
+
+When the user asks what is next, improvements, ideas, or what to port, check that page (open + recently merged) before proposing work. Compare against this fork’s README Extra UX table and skip Dependabot / Docker / receipt-OCR / Prisma-only changes.
+
+## Last check
+
+**11 Sep 2026.** Ported [#629](https://github.com/spliit-app/spliit/pull/629) (local-today expense date) and [#608](https://github.com/spliit-app/spliit/pull/608) (`FormMessage` `error.root.message`). Nothing else merged since 7 Sep 2026 worth lifting.
+
+Update this date when you next review that PR page.
+
+## Already in this fork (do not re-port)
+
+Paste amounts (#531), selector keyboard nav (#491), mobile tab icons (#539), monthly charts / stats / timeline (#532/#555/#584/#586), month grouping (#530), reorder participants (#416), multi-payer (#396), Tricount (#526), Splitwise (#483), copy expense, amount math (#184), PIN, QR, settle-in-other-currency (#588), global balance (#583), PWA (#587), shares (#562), locale week start (#559), CSV saldo (#473), translated titles (#537), security headers (#609), error boundaries (#611), participant IDs without full expense fetch (#616).
