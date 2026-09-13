@@ -14,10 +14,10 @@ When the user asks what is next, improvements, ideas, or what to port, check tha
 
 ## Last check
 
-**11 Sep 2026.** Ported [#629](https://github.com/spliit-app/spliit/pull/629) (local-today expense date) and [#608](https://github.com/spliit-app/spliit/pull/608) (`FormMessage` `error.root.message`). Nothing else merged since 7 Sep 2026 worth lifting.
+**14 Sep 2026 (evening).** Ported [#638](https://github.com/spliit-app/spliit/pull/638), [#639](https://github.com/spliit-app/spliit/pull/639), and [#635](https://github.com/spliit-app/spliit/pull/635). Skip this fork’s own open PRs [#644](https://github.com/spliit-app/spliit/pull/644)/[#645](https://github.com/spliit-app/spliit/pull/645) — already in tree.
 
 Update this date when you next review that PR page.
 
 ## Already in this fork (do not re-port)
 
-Paste amounts (#531), selector keyboard nav (#491), mobile tab icons (#539), monthly charts / stats / timeline (#532/#555/#584/#586), month grouping (#530), reorder participants (#416), multi-payer (#396), Tricount (#526), Splitwise (#483), copy expense, amount math (#184), PIN, QR, settle-in-other-currency (#588), global balance (#583), PWA (#587), shares (#562), locale week start (#559), CSV saldo (#473), translated titles (#537), security headers (#609), error boundaries (#611), participant IDs without full expense fetch (#616).
+Paste amounts (#531), selector keyboard nav (#491), mobile tab icons (#539), monthly charts / stats / timeline (#532/#555/#584/#586), month grouping (#530), reorder participants (#416), multi-payer (#396), Tricount (#526), Splitwise (#483), copy expense, amount math (#184), PIN, QR, settle-in-other-currency (#588), global balance (#583), PWA (#587), shares (#562), locale week start (#559), CSV saldo (#473), translated titles (#537), security headers (#609), error boundaries (#611), participant IDs without full expense fetch (#616), keep by-amount shares on reopen (#638), remainder + named split difference (#639), group expenses by stored calendar day (#635).
